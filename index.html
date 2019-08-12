@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+  <link rel="stylesheet" href="style.css">  
+  <title>iChef Menu</title>
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="nav-bar">
+      <div class="logo-area">
+        <h1 class="logo">iChef Menu</h1>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="food-input-boxes">
+        <div class="food-input-box">
+          <div class="box" id="protein">
+            <h2 class="food-group">Protein</h2>
+            <form>
+              <input class="food-input" list="meat-options" name="meat-options">
+                <datalist id="meat-options">
+                  <option value="Beef">
+                  <option value="Chicken">
+                  <option value="Pork">
+                  <option value="Egg">
+                  <option value="Salmon">
+                  <option value="Shrimp">
+                </datalist>
+              <h3 class="plus">+</h3>
+            </form>
+          </div>
+        </div>
+        <div class="food-input-box">
+          <div class="box" id="starch">
+            <h2 class="food-group">Starch</h2>
+            <form>
+                <input class="food-input" list="starch-options" name="starch-options">
+                <datalist id="starch-options">
+                  <option value="Pasta">
+                  <option value="Rice">
+                  <option value="Bread">
+                  <option value="Potatoe">
+                  <option value="Noodle">
+                </datalist>
+                <h3 class="plus">+</h3>
+              </form>
+          </div>
+        </div>
+        <div class="food-input-box">
+          <div class="box" id="vegetables">
+            <h2 class="food-group">Vegetables</h2>
+            <form>
+                <input class="food-input" list="vegetable-options" name="vegetable-options">
+                <datalist id="vegetable-options">
+                  <option value="Spinach">
+                  <option value="Kale">
+                  <option value="Broccoli">
+                  <option value="Lettuce">
+                  <option value="Swiss Chard">
+                </datalist>
+                <h3 class="plus">+</h3>
+              </form>
+          </div>
+        </div>
+        <div class="food-input-box">
+          <div class="box" id="fruits">
+            <h2 class="food-group">Nuts & Fruits</h2>
+            <form>
+                <input class="food-input" list="fruit-options" name="fruit-options">
+                <datalist id="fruit-options">
+                  <option value="Apple">
+                  <option value="Avocado">
+                  <option value="Pineapple">
+                  <option value="Strawberry">
+                  <option value="Blackberry">
+                  <option value="Peanuts">
+                  <option value="Seeds">
+                </datalist>
+                <h3 class="plus">+</h3>
+              </form>
+          </div>
+        </div>
+      </div>
+      <button class="btn meals-btn" id="get-Meals" type="button"><p>SHOW ME MY MEALS!</p></button>
+      <div class="meals-container" id="meals-container">
+        <p class="meal-prep-text">Here are our suggestions based on your choices:</p>
+        <div class="meals-suggestions-container" id="meals-suggestions-container">
+          <div class="meal-suggestions" id="meal-suggestions-0">
+            <div class="meal" id="meal-0">
+              <img src="img/question.png" alt="" class="meal-picture" id="meal-picture-0">
+              <h4 class="meal-name" id="meal-name-0"></h4>
+            </div>
+            <div class="meal" id="meal-1">
+              <img src="img/question.png" alt="" class="meal-picture" id="meal-picture-1">
+              <h4 class="meal-name" id="meal-name-1"></h4>
+            </div>
+            <div class="meal" id="meal-2">
+              <img src="img/question.png" alt="" class="meal-picture" id="meal-picture-2">
+              <h4 class="meal-name" id="meal-name-2"></h4>
+            </div>
+            <div class="meal" id="meal-3">
+              <img src="img/question.png" alt="" class="meal-picture" id="meal-picture-3">
+              <h4 class="meal-name" id="meal-name-3"></h4>
+            </div>
+          </div>
+        </div>
+
+        <p class="more-meals-text">Click <span id="more">HERE</span> if you want to see more options</p>
+      </div>      
+    </main>    
+  </div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
