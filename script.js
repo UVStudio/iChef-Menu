@@ -60,6 +60,7 @@ function reset(){
     getMeals.classList.remove('none');
     resetBtn.classList.add('none');
     resetBtn.classList.remove('block');
+    //location.reload();
   });
 }
 reset();
@@ -75,11 +76,8 @@ function removeDivs(){
 
 //function to make the HTTP call using the chosen foods, then call functions to show meals
 function apiCall(arr){
-  let foodsInApiCall = [];
-  let foodsLength = arr.length;
-  for(i = 0; i < foodsLength; i++){
-    foodsInApiCall.push(arr[i]+'%20');
-  }
+  let foodsInApiCall = arr.map(a => a+'%20');
+
   let apiCallString = foodsInApiCall.join('').replace(' ', '%20');
   let apiCallStringURL = apiCallString.slice(0, apiCallString.length-3);
 
@@ -110,6 +108,7 @@ let filterList = function (list, arr){
   });
   return filteredMealsArray;
 }
+
 
 function callBack(arr) {
   //essentially, arr is totalFoodSelectionArrayValue returned in function captureFoods
