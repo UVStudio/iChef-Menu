@@ -21,7 +21,7 @@
           <div class="box" id="protein">
             <h2 class="food-group">Protein</h2>
             <form>
-              <input class="food-input" list="meat-options" name="meat-options">
+              <input class="food-input" list="meat-options" name="meat-options" id="meat">
                 <datalist id="meat-options">
                   <option value="Beef">
                   <option value="Chicken">
@@ -86,6 +86,7 @@
         </div>
       </div>
       <button class="btn meals-btn" id="get-Meals" type="button"><p>SHOW ME MY MEALS!</p></button>
+      <button class="btn meals-btn none" id="reset" type="button"><p>Reset</p></button>
       <div class="meals-container" id="meals-container">
         <p class="meal-prep-text">Here are our suggestions based on your choices:</p>
         <div class="meals-suggestions-container" id="meals-suggestions-container">

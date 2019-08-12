@@ -74,6 +74,10 @@ input {
   font-size: 1.2em;
 }
 
+.food-grey {
+  color: #bbb;
+}
+
 .plus {
   float: right;
   position: relative;
@@ -106,6 +110,14 @@ input {
   font-size: 1.3em;
   font-family: Quicksand;
   margin: 20px auto 40px;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
 }
 
 .meals-container {
