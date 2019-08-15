@@ -121,9 +121,12 @@ function callBack(arr) {
 //function to show meals pictures
 function showMealsPics(arr){
   const mealsPicArr = document.querySelectorAll('.meal-picture');
+  const mealsNameArr = document.querySelectorAll('.meal-name');
   for(var i = 0; i < mealsPicArr.length; i++){
     document.getElementById('meal-picture-'+i).src = arr[i].recipe.image;
     document.getElementById('meal-name-'+i).innerText = arr[i].recipe.label;
+    mealsPicArr[i].classList.add('pointer');
+    mealsNameArr[i].classList.add('pointer');
   }
 }
 
