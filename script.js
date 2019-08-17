@@ -104,11 +104,11 @@ let filterList = function (list, arr){
       if(searchRegex.test(list[i].recipe.ingredientLines.join())){
         filteredMealsArray.push(list[i]);
       }
+      console.log(list);
     }
   });
   return filteredMealsArray;
 }
-
 
 function callBack(arr) {
   //essentially, arr is totalFoodSelectionArrayValue returned in function captureFoods
@@ -141,7 +141,9 @@ function moreMeals(arr){
     newSuggestions.classList.add('meal-suggestions');
     newSuggestions.id = 'meal-suggestions-'+numOfRows.length;
     mealsContainer.appendChild(newSuggestions);
-    let newContent = "<div class='meal' id='meal-"+Number(numOfMeals.length)+"'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-"+Number(numOfMeals.length)+"'><h4 class='meal-name' id='meal-name-"+Number(numOfMeals.length)+"'></h4></div><div class='meal' id='meal-"+Number(numOfMeals.length+1)+"'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-"+Number(numOfMeals.length+1)+"'><h4 class='meal-name' id='meal-name-"+Number(numOfMeals.length+1)+"'></h4></div><div class='meal' id='meal-"+Number(numOfMeals.length+2)+"'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-"+Number(numOfMeals.length+2)+"'><h4 class='meal-name' id='meal-name-"+Number(numOfMeals.length+2)+"'></h4></div><div class='meal' id='meal-"+Number(numOfMeals.length+3)+"'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-"+Number(numOfMeals.length+3)+"'><h4 class='meal-name' id='meal-name-"+Number(numOfMeals.length+3)+"'></h4></div>";
+
+    let newContent = `<div class='meal' id='meal-${Number(numOfMeals.length)}'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-${Number(numOfMeals.length)}'><h4 class='meal-name' id='meal-name-${Number(numOfMeals.length)}'></h4></div><div class='meal' id='meal-${Number(numOfMeals.length+1)}'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-${Number(numOfMeals.length+1)}'><h4 class='meal-name' id='meal-name-${Number(numOfMeals.length+1)}'></h4></div><div class='meal' id='meal-${Number(numOfMeals.length+2)}'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-${Number(numOfMeals.length+2)}'><h4 class='meal-name' id='meal-name-${Number(numOfMeals.length+2)}'></h4></div><div class='meal' id='meal-${Number(numOfMeals.length+3)}'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-${Number(numOfMeals.length+3)}'><h4 class='meal-name' id='meal-name-${Number(numOfMeals.length+3)}'></h4></div>`;
+
     document.getElementById('meal-suggestions-'+numOfRows.length).innerHTML = newContent;
     showMealsPics(arr);
   });
@@ -150,6 +152,6 @@ function moreMeals(arr){
 
 
 
-
+// let newContent = "<div class='meal' id='meal-"+Number(numOfMeals.length)+"'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-"+Number(numOfMeals.length)+"'><h4 class='meal-name' id='meal-name-"+Number(numOfMeals.length)+"'></h4></div><div class='meal' id='meal-"+Number(numOfMeals.length+1)+"'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-"+Number(numOfMeals.length+1)+"'><h4 class='meal-name' id='meal-name-"+Number(numOfMeals.length+1)+"'></h4></div><div class='meal' id='meal-"+Number(numOfMeals.length+2)+"'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-"+Number(numOfMeals.length+2)+"'><h4 class='meal-name' id='meal-name-"+Number(numOfMeals.length+2)+"'></h4></div><div class='meal' id='meal-"+Number(numOfMeals.length+3)+"'><img src='img/question.png' alt='' class='meal-picture' id='meal-picture-"+Number(numOfMeals.length+3)+"'><h4 class='meal-name' id='meal-name-"+Number(numOfMeals.length+3)+"'></h4></div>";
 
 
